@@ -1,0 +1,130 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1300
+@media screen and (max-width: 1300px)
+	.navbar
+		&-wrapper
+			order: 5
+			width: 100%
+		.container-fluid
+			padding: 1rem 40px
+		&-nav
+			justify-content: center
+			padding-top: 10px
+			.dropdown.show .nav-link:after
+				bottom: -18px
+	
+
+// ≥1200px
++media-breakpoint-down(lg)
+	//
+
+// ≥992px
++media-breakpoint-down(md)
+	
+
+	// Footer
+
+	.main-footer
+		.soc-b
+			text-align: center
+
+	.footer-nav
+		text-align: center
+
+	.app
+		justify-content: center
+
+
+// ≥768px
++media-breakpoint-down(sm)		
+	.navbar-toggle
+		display: block
+		&:not(.collapsed)
+			left: calc(100% - 45px)
+			width: 45px
+			z-index: 1001
+
+	.navbar-collapse.collapse.in + .navbar-collapse-overlay
+		display: block
+		
+	.navbar-collapse
+		display: none
+		z-index: 1100
+		position: fixed
+		left: calc(-100% + 50px)
+		top: 0
+		bottom: 0
+		width: calc(100% - 50px)
+		height: auto
+		max-height: none
+		margin-left: 0
+		overflow-y: auto
+		overflow: -moz-scrollbars-none
+		background-color: #222
+		transition: left 0.2s ease-out
+		box-shadow: 8px 0px 10px 0px rgba(0,0,0,0.05)
+		&.in
+			display: block
+			left: 0
+
+	.navbar-user
+		order: 3
+
+	.navbar
+		.container-fluid
+			padding: .4rem 20px
+		&-header
+			margin-left: 80px
+
+	.navbar-brand
+		.logo-i
+			width: 180px
+
+	.main-footer
+		display: none
+
+	.modal
+		&-content
+			width: auto
+			max-width: 585px
+
+// ≥576px
++media-breakpoint-down(xs)
+	.navbar-header
+		margin-left: 65px
+
+	.navbar-brand
+		font-size: 0
+		.logo-i
+			width: 160px
+
+	.navbar-contact
+		display: none
+
+	.cart-btn
+		font-size: 0
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+	.navbar-collapse.collapse
+		display: flex
+
+// ≤992px
++media-breakpoint-up(lg)
+	.mod-dish
+		.modal-content
+			width: 810px
+
+// ≤1200px
++media-breakpoint-up(xl)
+	//

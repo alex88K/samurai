@@ -1,0 +1,721 @@
+@import vars
+@import fonts
+@import libs
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #fff
+	opacity: 1
+
+*:-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*::-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #fff
+	opacity: 1
+
+html, body
+	min-height: 100%
+	margin: 0
+	padding: 0
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $font
+	overflow-x: hidden
+	background: linear-gradient(to bottom right, #000, rgba(0,0,0,.85) 40%, rgba(0,0,0,.85) 60%, #000 100%)
+	color: #fff
+	& > svg
+		display: none
+
+a
+	color: #fff
+	&:hover,
+	&:focus
+		color: $accent
+		text-decoration: none
+
+p
+	margin: 1em 0
+
+b
+	font-weight: 600
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+	color: #684639
+	font-weight: 700
+
+h1
+	font-size: 36px
+
+h2
+	font-size: 28px
+
+h3
+	font-size: 24px
+	
+h4
+	font-size: 16px
+
+h5
+	font-size: 14px
+
+h6
+	font-size: 12px
+
+.wrapper
+	position: relative
+	min-height: 100vh
+
+.main
+	margin-top: 92px
+	.container-fluid
+		padding: 1.5rem 92px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.fleft
+	float: left
+
+.fright
+	float: right
+
+.cf
+	&:after
+	&:before 
+		content: ''
+		display: table
+	&:after 
+		clear: both
+
+.btn
+	display: inline-block
+	height: 35px
+	min-width: 190px
+	margin: .6em 0
+	padding: 0 20px
+	line-height: 33px
+	border-radius: 8px
+	border: 1px solid transparent
+	background-color: $accent
+	color: #000
+	font-size: 16px
+	font-weight: 500
+	text-align: center
+	transition: all .25s ease
+	&:hover
+		background-color: #fff
+	&:focus
+		box-shadow: none
+	&.btn-med
+		min-width: 210px
+	&.btn-wt,
+	&.btn-t,
+		border: 1px solid #fff
+		&:hover,
+		&:focus,
+		&:active
+			border-color: $accent
+			background-color: $accent
+			color: #fff
+			outline: none
+	&.btn-t
+		background-color: transparent
+		border: 1px solid $accent
+		color: $accent
+		&:hover
+			border: 1px solid transparent
+			color: #000
+			background-color: #fff
+	&.btn-md
+		width: auto
+
+.btn-blank
+	padding: 0
+	background-color: transparent
+	border: none
+	color: $accent
+	cursor: pointer
+	font-size: 17px
+	&:focus
+		outline: none
+		box-shadow: none
+	&:hover
+		color: #fff
+
+.btn-group
+	text-align: center
+
+.form-group
+	margin-bottom: 20px
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"]
+	width: 240px
+	height: 35px
+	padding: 0 20px 0 20px
+	line-height: 35px
+	border: 1px solid #fff
+	color: #fff
+	box-shadow: none
+	background-color: transparent
+	border-radius: 8px
+	-webkit-appearance: none
+	transition: all .25s ease
+	&:focus
+		border: 1px solid $accent
+		outline: none
+
+input.error
+	border: 1px solid #f81d17 !important
+
+.nowrap
+	white-space: nowrap
+
+.section-b
+	padding: 80px 0
+
+.section-title
+	margin: 0 0 20px 0
+	padding-bottom: 3px
+	padding-left: 30px
+	font-size: 28px
+	font-weight: 500
+	color: #000
+	line-height: 1.3
+	border-left: 6px solid $accent
+
+// Header
+
+.fixed-top
+	z-index: 1040
+
+.main-header,
+.navbar
+	background: #000
+	background: linear-gradient(to bottom, #040404 0%, #222 100%)
+
+.navbar
+	padding: 0
+	.container-fluid
+		min-height: 60px
+		padding: 1.5rem 92px
+
+.navbar-header
+	display: flex
+	flex-direction: row
+	align-items: center
+
+.navbar-brand
+	.logo-i
+		width: 224px
+		height: 29px
+
+.navbar-contact
+	display: flex
+	flex-direction: column
+
+.navbar-location
+	margin: 0 12px
+	cursor: pointer
+	span
+		color: #fff
+	&:hover
+		span
+			color: $accent
+		.svg-i
+			fill: $accent
+
+.pin-i
+	width: 12px
+	height: 15px
+	fill: #fff
+
+.cart-i
+	width: 22px
+	height: 22px
+	fill: #fff
+
+.svg-i
+	margin-right: 8px
+
+.navbar-nav
+	flex-direction: row
+	.nav-item
+		margin: 0 .8vw
+		&.active .nav-link
+			color: $accent
+	.nav-link
+		position: relative
+		font-size: 18px
+	.dropdown,
+	.dropleft,
+	.dropright,
+	.dropup
+		position: initial
+		&.show .nav-link
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				bottom: -27px
+				margin-left: -16px
+				border: 16px solid transparent
+				border-bottom: 12px solid $gray
+	.dropdown-menu
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		margin: 0
+		padding: 1.7rem 0
+		border: none
+		text-align: center
+		border-radius: 0
+		background-color: $gray
+	.dropdown-item
+		width: auto
+		display: inline-block
+		padding: .25rem 2rem
+		color: #000
+		font-size: 18px
+		&:hover
+			color: #fff
+			background-color: transparent
+			svg
+				fill: #fff
+		&:focus
+			outline: none
+			background-color: transparent
+		svg
+			fill: #000
+
+.nav-link
+	&:focus
+		outline: none
+
+.dropdown-i
+	display: block
+	margin: 0 auto 4px auto
+
+.navbar-user
+	display: flex
+	flex-direction: row
+	align-items: center
+
+.login-link
+	padding: 0 .9rem
+	background-color: transparent
+	border: none
+	cursor: pointer
+	color: $accent
+	&:focus
+		outline: none
+
+.cart-btn
+	display: block
+	padding: 0 0 0 .9rem
+	&:hover
+		svg
+			fill: $accent
+
+// Footer
+
+.main-footer
+	.container-fluid
+		padding: 0 92px
+
+.f-inner
+	display: flex
+	flex-direction: row
+	align-items: center
+	min-height: 70px
+	padding: 15px 0
+	background-color: #000
+
+.soc-link
+	display: inline-block
+	width: 30px
+	height: 30px
+	margin: 0 12px 8px 0
+	background-color: #fff
+	border-radius: 50%
+	text-align: center
+	line-height: 28px
+	&:hover
+		background-color: $accent
+	.soc-i
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+
+.soc-i
+	width: 20px
+	height: 20px
+
+.apple-i,
+.android-i
+	fill: #fff
+	width: 25px
+	height: 29px
+
+.app
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: flex-end
+	a
+		margin: 0 0 0 8px
+		&:hover svg
+			fill: $accent
+
+.footer-nav
+	margin: 0
+	padding: 0
+	list-style-type: none
+	.f-nav-item
+		display: inline-block
+
+.forgot-pass-label
+	margin: 0 0 1em 0
+	font-size: 16px
+	font-weight: 300
+	color: #fff
+
+// Catalog
+
+
+.dishes-item
+	position: relative
+	height: 12.7vw
+	margin-bottom: 10px
+	background-color: #000
+	cursor: pointer
+	.row
+		height: 100%
+	&-photo
+		padding: 0 1rem
+		height: 10.5vw
+		img
+			max-height: 10.5vw
+	&-side
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 1rem
+	&-title
+		padding-top: 1rem
+		padding-bottom: .8rem
+		font-size: 24px
+		font-weight: bold
+		line-height: 1
+	&-desc
+		line-height: 1.15
+	&-price
+		position: absolute
+		left: 42px
+		bottom: 20px
+		font-size: 24px
+		font-weight: bold
+		.svg-i
+			margin-left: 6px
+	&-footer
+		.btn
+			min-width: 105px
+			height: 29px
+			padding: 0 15px
+			line-height: 27px
+
+.ruble-i
+	width: 18px
+	height: 17px
+	fill: #fff
+
+.mod-dish
+	.modal-content
+		width: auto
+		max-width: 810px
+	.modal-dialog
+		max-width: 810px
+	.modal-body
+		max-height: none
+		padding: 50px 7% 20px 7%
+	.dishes-item
+		height: auto
+		&-photo
+			width: 
+			height: 14.4vw
+			img
+				max-height: 14.4vw
+		&-side
+			padding: 1rem 2rem 1rem
+		&-title
+			padding: 0 0 1.3rem 0
+			font-size: 25px
+		&-desc,
+		&-size
+			font-size: 16px
+		&-footer
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+		&-price
+			position: relative
+			left: initial
+			bottom: initial
+			top: 3px
+			font-size: 30px
+			.svg-i
+				width: 22px
+				height: 21px
+	.modal-footer
+		justify-content: flex-start
+		padding: 15px 7% 50px 7%
+		border: none
+
+
+.related-dishes
+	padding: 0 1rem
+	&-title
+		margin-bottom: .5rem
+		font-size: 17px
+	&-item
+		color: #fff
+		border-bottom: 1px dashed #555
+		font-size: 14px
+		&:after
+			content: ', '
+		&:hover
+			color: $accent
+
+// Hamburger
+
+.navbar-toggle
+	display: none
+	z-index: 10
+	position: absolute
+	top: 10px
+	left: 20px
+	width: 40px
+	height: 40px
+	margin: 0
+	padding: 0
+	background: transparent
+	border: none
+	outline: none
+	border-radius: 0
+	cursor: pointer
+	&:hover
+		cursor: pointer
+	&:focus
+		outline: none
+	.navbar-toggler-icon
+		position: absolute
+		height: 2px
+		width: 24px
+		top: 19px
+		left: 3px
+		border-radius: 0
+		background-color: #fff
+		&:before
+			content: ""
+			position: absolute
+			top: -9px
+			left: 0px
+			width: 30px
+			height: 2px
+			background-color: #fff
+			border-radius: 0
+			transition: all .3s ease 
+		&:after
+			content: ""
+			position: absolute
+			top: 9px
+			left: 0
+			width: 30px
+			height: 2px
+			background-color: #fff
+			border-radius: 0
+			transition: all .3s ease 
+	&.active
+		&:hover 
+			cursor:pointer 
+		&:focus
+			outline: none
+		.navbar-toggler-icon
+			background: transparent
+			&:before
+				transform: rotateZ(45deg) translate(5.5px, 6px)
+			&:after
+				transform: rotateZ(-45deg) translate(7px, -7px)
+
+.navbar-collapse-overlay
+	display: none
+	z-index: 1000
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	height: 150vh
+	width: 100vw
+	background-color: rgba(3,3,3,0.6)
+
+.close-btn
+	display: none
+	z-index: 1
+	position: absolute
+	top: 0
+	right: 0
+	width: 40px
+	height: 35px
+	border: none
+	background-color: transparent
+	cursor: pointer
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		top: 15px
+		left: 10px
+		width: 25px
+		height: 3px
+		background-color: #fff
+		transform: rotate(45deg)
+	&:before
+		transform: rotate(-45deg)
+	&:focus
+		outline: none
+	&:hover
+		&:after,
+		&:before
+			background-color: $accent
+	&__light
+		&:after,
+		&:before
+			content: ''
+			width: 20px
+			height: 2px
+
+// Modal
+
+.modal.fade .modal-dialog
+	transition: transform .3s ease-out,-webkit-transform .3s ease-out
+	transform: translate(0,0)
+
+.modal
+	&-content
+		justify-content: center
+		width: 585px
+		min-height: 405px
+		margin: 0 auto
+		background-color: #000
+		border-radius: 5px
+		border: none
+		.close-btn
+			display: block
+			top: 2px
+			right: 0
+	&-body
+		flex: 0
+		max-height: 500px
+		padding: 15px 14.5% 40px 14.5%
+		overflow: auto
+		color: #fff
+		label
+			padding: 0
+		input
+			width: 100%
+		.row
+			margin-left: -12px
+			margin-right: -12px
+		.col
+			padding-left: 12px
+			padding-right: 12px 
+			& > .btn
+			width: 100%
+			min-width: initial
+
+.modal-header
+	align-self: flex-start
+	padding: 25px 14.5% 10px 14.5%
+	border: none
+
+.modal-title
+	margin: 0 auto
+	font-size: 25px
+	font-weight: bold
+	color: #fff
+	line-height: 1.1
+
+.modal-backdrop
+	background-color: #434343
+	&.show
+		opacity: .63
+
+.modal-success-text
+	margin: 1em 0 2em 0
+	text-align: center
+
+#success-modal .modal-content
+	padding: 1em
+
+// Location modal
+
+.mod-location
+	.modal-content
+		max-width: 400px
+	.city-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		.city-item
+			a
+				display: block
+				padding: 3px 0
+				font-size: 16px
+			&.current a
+				font-weight: bold
+				color: $accent
+
+.mCSB_scrollTools .mCSB_draggerRail
+	background-color: rgba(50,50,50,.9)
+
+// Modal auth
+
+.mod-auth
+	.modal-content
+		padding: 50px 0
+	.modal-body
+		padding-bottom: 0
+
+
+
+@import "media" // Всегда в конце

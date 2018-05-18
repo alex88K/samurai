@@ -1,0 +1,224 @@
+<footer class="main-footer">
+	<div class="f-inner fixed-bottom">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col col-xl-3 col-lg-3 col-md-12">
+					<div class="soc-b">
+						<a href="/" class="soc-link"><svg class="soc-i vk-i"><use xlink:href="#vk"></use></svg></a>
+						<a href="/" class="soc-link"><svg class="soc-i inst-i"><use xlink:href="#inst"></use></svg></a>
+						<a href="/" class="soc-link"><svg class="soc-i ok-i"><use xlink:href="#ok"></use></svg></a>
+					</div>
+				</div>
+
+				<div class="col col-xl-4 col-lg-4 col-md-12">
+					<ul class="footer-nav">
+						<li class="f-nav-item active">
+							<a class="nav-link" href="/">Акции</a>
+						</li>
+						<li class="f-nav-item">
+							<a class="nav-link" href="contacts.html">Доставка</a>
+						</li>
+						<li class="f-nav-item">
+							<a class="nav-link" href="contacts.html">Контакты</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col col-xl-5 col-lg-5 col-md-12">
+					<div class="app">Скачивайте наше мобильное приложение: <a href=""><svg class="android-i"><use xlink:href="#android"></use></svg></a> <a href="/"><svg class="apple-i"><use xlink:href="#apple"></use></svg></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</div>
+
+
+<!-- Modals -->
+
+<!-- Login form -->
+
+<div class="modal mod-auth fade" id="user-login-modal" tabindex="-1" role="dialog" aria-labelledby="user-login-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+			<div class="modal-header">
+				<div class="modal-title">Войти</div>
+			</div>
+			<div class="modal-body">
+				<form action="#" class="auth-form">
+					<div class="form-group">
+						<input type="tel" name="phone" placeholder="Телефон" required>
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" placeholder="Пароль" required>
+					</div>
+					<div class="form-group text-right">
+						<button type="button" class="btn-blank js-modals" data-toggle="modal" data-target="#forgot-pass-modal">Забыли пароль?</button>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col col-lg-6 col-md-6">
+								<button type="button" class="btn btn-t js-modals" data-toggle="modal" data-target="#user-reg-modal">Зарегистрироваться</button>
+							</div>
+							<div class="col col-lg-6 col-md-6">
+								<button type="submit" class="btn btn-submit">Войти</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Registration form -->
+
+<div class="modal mod-auth fade" id="user-reg-modal" tabindex="-1" role="dialog" aria-labelledby="user-reg-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+			<div class="modal-header">
+				<div class="modal-title">Регистрация</div>
+			</div>
+			<div class="modal-body">
+				<form action="#" class="auth-form">
+					<div class="form-group">
+						<input type="text" name="uname" placeholder="Имя" required>
+					</div>
+					<div class="form-group">
+						<input type="tel" name="phone" placeholder="Телефон" required>
+					</div>
+					<div class="form-group">
+						<input type="email" name="email" placeholder="e-mail" required>
+					</div>
+					<div class="form-group">
+						<input type="password" name="pass" placeholder="Пароль" required>
+					</div>
+					<div class="form-group">
+						<input type="password" name="pass2" placeholder="Повторите Пароль" required>
+					</div>
+					<div class="form-group mt-5 text-center">
+						<button type="submit" class="btn">Зарегистрироваться</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Forgot password -->
+
+<div class="modal mod-auth fade" id="forgot-pass-modal" tabindex="-1" role="dialog" aria-labelledby="forgot-pass-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+			<div class="modal-header">
+				<div class="modal-title">Восстановление пароля</div>
+			</div>
+			<div class="modal-body">
+				<div class="forgot-pass-label">Выберите способ восстановления пароля</div>
+				<div class="row text-center">
+					<div class="col-lg-12">
+						<button type="button" class="btn btn-t js-modals" data-target="#useremail-forgot-modal" data-toggle="modal">Восстановить через E-mail</button>
+					</div>
+					<div class="col-lg-12">
+						<button type="button" class="btn js-modals" data-target="#userphone-forgot-modal" data-toggle="modal">Восстановить через Телефон</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Restore password by email -->
+
+<div class="modal mod-auth fade" id="useremail-forgot-modal" tabindex="-1" role="dialog" aria-labelledby="useremail-forgot-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+			<div class="modal-header">
+				<div class="modal-title">Восстановление пароля</div>
+			</div>
+			<div class="modal-body">
+				<form action="/">
+					<div class="form-group">
+						<input type="email" name="email" placeholder="e-mail" required>
+					</div>
+					<div class="form-group text-center">
+						<input type="submit" class="btn btn-md" value="Восстановить">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Restore password by phone number -->
+
+<div class="modal mod-auth fade" id="userphone-forgot-modal" tabindex="-1" role="dialog" aria-labelledby="userphone-forgot-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+			<div class="modal-header">
+				<div class="modal-title">Восстановление пароля</div>
+			</div>
+			<div class="modal-body">
+				<form action="/">
+					<div class="form-group">
+						<input type="tel" name="phone" placeholder="Номер телефона" required>
+					</div>
+					<div class="form-group text-center">
+						<input type="submit" class="btn btn-md" value="Восстановить">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Choose your town -->
+
+<div class="modal mod-location fade" id="location-modal" tabindex="-1" role="dialog" aria-labelledby="location-modal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close-btn close-btn__light" data-dismiss="modal">&nbsp;</button>
+			<div class="modal-header">
+				<div class="modal-title">Выберите город</div>
+			</div>
+			<div class="modal-body mCustomScrollbar">
+				<ul class="city-list">
+					<li class="city-item current"><a href="/">Анапа</a></li>
+					<li class="city-item"><a href="/">Сочи</a></li>
+					<li class="city-item"><a href="/">Нижний-Новгород</a></li>
+					<li class="city-item"><a href="/">Москва</a></li>
+					<li class="city-item"><a href="/">Санкт-Петербург</a></li>
+					<li class="city-item"><a href="/">Анапа</a></li>
+					<li class="city-item"><a href="/">Сочи</a></li>
+					<li class="city-item"><a href="/">Нижний-Новгород</a></li>
+					<li class="city-item"><a href="/">Москва</a></li>
+					<li class="city-item"><a href="/">Санкт-Петербург</a></li>
+					<li class="city-item"><a href="/">Анапа</a></li>
+					<li class="city-item"><a href="/">Сочи</a></li>
+					<li class="city-item"><a href="/">Нижний-Новгород</a></li>
+					<li class="city-item"><a href="/">Москва</a></li>
+					<li class="city-item"><a href="/">Санкт-Петербург</a></li>
+					<li class="city-item"><a href="/">Анапа</a></li>
+					<li class="city-item"><a href="/">Сочи</a></li>
+					<li class="city-item"><a href="/">Нижний-Новгород</a></li>
+					<li class="city-item"><a href="/">Москва</a></li>
+					<li class="city-item"><a href="/">Санкт-Петербург</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<link rel="stylesheet" href="css/main.min.css">
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
